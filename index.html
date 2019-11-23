@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="form">
+		<div class="icon"></div>
+		<div class="input-wraper">
+			<input type="text" name="email" class="input" id="email" autocomplete="off">
+			<label for="email" class="input-label" id="email-label">
+				E-mail
+			</label>
+		</div>
+		<div class="input-wraper">
+			<input type="password" name="pass" class="input" id="pass" autocomplete="off">
+			<label for="pass" class="input-label" id="pass-label">
+				Password
+			</label>
+			<a href="#" class="showPass" id="passVis"></a>
+		</div>
+		<input type="submit" name="submit" value="Login" class="button">
+		<a href="#forgot" class="forgot">Forgot password?</a>
+	</div>
+	<script type="text/javascript">
+
+		var input = document.getElementById('email');
+		var label = document.getElementById('email-label');
+		hover(input,label);
+		
+		input = document.getElementById('pass');
+		label = document.getElementById('pass-label');
+		hover(input, label);
+
+		function hover(input, label) {
+			
+			input.oninput = function() {
+				this.value ? this.classList.add("input-focus") : this.classList.remove("input-focus");
+				this.value ? label.classList.add("label-hover") : label.classList.remove("label-hover");
+			}
+		}	
+
+		document.getElementById('passVis').addEventListener('click', changeVisib);
+
+		var visibility = true;
+		var button = document.getElementById('passVis');
+
+		function changeVisib(e) {
+
+			if(visibility) {
+				button.classList.add('notShowPass');
+				visibility = false;
+				document.getElementById('pass').type = 'text';
+			} 
+			
+			else if(!visibility) {
+				button.classList.remove('notShowPass');
+				visibility = true;
+				document.getElementById('pass').type = 'password';
+			}
+		}
+	</script>
+</body>
+</html>	

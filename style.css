@@ -1,0 +1,139 @@
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+
+		.form {
+			position: relative;
+			width: 250px;
+			margin: 15% auto;
+			box-shadow: 0px 0px 30px grey;
+			border-radius: 5px;
+			padding: 20px;
+			height: 400px;
+		}
+
+		.input {
+			transition: 0.2s;
+			color: #727f82;
+			font-weight: 700;
+			width: 100%;
+			padding: 2px;
+			outline: none;
+			border: none;
+			border-bottom: 1px solid #727f82;
+		    font-size: 16px;
+    		margin: 6px 0;
+		}
+
+		.input-label {
+			transition: 0.2s;
+			color: #727f82;
+			position: relative;
+			pointer-events: none;
+			top: -28px;
+			font-weight: 600;
+		}
+
+		.input:focus {
+		    transition: 0.2s;
+			border-bottom: 1px solid #77c4d4;
+		}
+
+		.input:focus + .input-label {
+			top: -48px;
+			font-size: 12px;
+			color: #77c4d4;
+		}
+
+		.input-focus {
+		    transition: 0.2s;
+			border-bottom: 1px solid #77c4d4;
+		}
+
+		.label-hover {
+			top: -48px;
+			font-size: 12px;
+			color: #77c4d4;
+		}
+
+		.input-wraper {
+    		margin: 23px 18px;
+		}
+
+		.button {
+			margin-top: 27px;
+			margin: 12px auto;
+			position: relative;
+			border: none;
+			cursor: pointer;
+			width: 60%;
+			transform: translate(-50%);
+			left: 50%;
+			text-transform: uppercase;
+			background-color: #77c4d4;
+			color: #ffff;
+			font-weight: 600;
+			font-size: 15px;
+			border-radius: 5px;
+			padding: 14px;
+		}
+
+		.button:hover {
+			background-color: #61b0be;
+			border-bottom: 2px solid #3e7079;
+		}
+
+		.icon {
+			width: 100px;
+			height: 82px;
+			background: url(icons/user.svg);
+			background-size: 100px 82px;
+			margin: 0 auto;
+		}
+
+		.forgot {
+			padding: 4px;
+			font-size: 13px;
+			text-decoration: none;
+			color: #5a9daa;
+			position: absolute;
+			bottom: 12px;
+			transform: translate(-50%);
+			left: 50%;
+		}
+
+		a:hover {
+			color: #80dfdf;
+		}
+
+		.showPass {
+			transition: 0.1s;
+			width: 27px;
+			height: 24px;
+			background: url(icons/show.svg);
+			background-size: 27px 27px;		
+			margin: 0 auto;
+			border: none;
+			float: right;
+			cursor: pointer;
+			position: relative;
+			top: -34px;
+			outline: none;
+		}
+
+		.notShowPass {
+			transition: 0.1s;
+			width: 27px;
+			height: 24px;
+			background: url(icons/notshow.svg);
+			background-size: 27px 27px;	
+			margin: 0 auto;
+			border: none;
+			float: right;
+			cursor: pointer;
+			position: relative;
+			top: -34px;
+			outline: none;
+		}
